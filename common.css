@@ -1,0 +1,62 @@
+.pure-controls
+{
+    margin : 1.5em 0 0 11em;
+}
+.pure-form select
+{
+    height:2.25em;
+    border:1px solid #ccc;
+    background-color:#fff
+}
+.pure-form select[multiple]
+{
+    height:auto
+}
+.pure-form label
+{
+    margin:.5em 0 .2em
+}
+.pure-form fieldset{margin:0;padding:.35em 0 .75em;border:0}
+
+.pure-form-stacked input:not([type]){display:block;margin:.25em 0}
+.pure-form-aligned input,
+.pure-form-aligned textarea,
+.pure-form-aligned select,
+.pure-form-aligned .pure-help-inline,
+.pure-form-message-inline
+{
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+    vertical-align:middle
+}
+.pure-form-aligned textarea
+{
+    vertical-align:top;
+}
+.pure-form-aligned .pure-control-group
+{
+    margin-bottom:.3em
+}
+.pure-form-aligned 
+.pure-control-group label
+{
+    text-align:left;
+    display:inline-block;
+    vertical-align:middle;
+    width:10em;
+    margin:0 .5em 0 0
+}
+.border {
+    margin: 4pt 5pt;
+    padding: 10px;
+    border: 1pt solid #C1B496;
+    background-color: #F7F6F5;
+    color: black;
+}
+.border-form {
+    width: 350px;
+}
+.border-div {
+    width: 450px;
+}

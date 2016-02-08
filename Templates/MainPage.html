@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Main Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="common.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        function load(id, tab_count, div_id)
+        {
+            $.get('sections', {id:id, tab_count:tab_count}, 
+                function(data) {
+                    $('#'+div_id).html(data);
+                });
+        }
+    </script>
+</head>
+<body onload="load('', 0, 'root')">
+    <a href='section/add'>Вставить раздел</a>
+    <div id="root" class="border border-div"> 
+    </div>
+</body>
+</html>

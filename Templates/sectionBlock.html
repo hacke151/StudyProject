@@ -1,0 +1,14 @@
+<? foreach($sections as $section): ?>
+    <p>
+        <?=$tabs?>
+        <a href='javascript:load(<?=$section["sectionID"]?>, <?=$inner_tab_count?>, "<?=$div_id?>")' title="Раскрыть раздел"><img src='img/plus.png' alt="Раскрыть раздел"/></a>
+        <?=$section["sectionName"]?>
+        <a href='section/edit<?=$section["sectionID"]?>'><img src='img/edit.png' alt="Редактировать"/></a> 
+        <a href='section/delete<?=$section["sectionID"]?>' title="Удалить"><img src='img/delete.png' alt="Удалить"/></a>
+    </p>
+
+    <?=$tabs?>&nbsp;&nbsp;<a href='section/add<?=$section["sectionID"]?>'>Вставить подраздел</a>
+    <?=$tabs?>&nbsp;&nbsp;<a href='element/add<?=$section["sectionID"]?>'>Вставить элемент</a>
+    <div id='<?=$div_id?>'> 
+    </div>
+<? endforeach ?>

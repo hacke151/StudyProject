@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><?=$title?></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="common.css">
+    </head>
+    <body>
+            <form method="post" action="<?=$formAction ?>" class="pure-form pure-form-aligned border border-form">
+                <fieldset>
+                    <div class="pure-control-group">
+                        <label for="sectionID">ИД раздела:</label>
+                        <input type="text" id="sectionID" name="sectionID" readonly value="<?=$section->id?>"/>
+                    </div>
+                    <div class="pure-control-group">
+                         <label for="sectionName">Название раздела:</label>
+                         <input type="text" id="sectionName" name="sectionName" value="<?=$section->name?>"/>
+                    </div>
+                    <div class="pure-control-group">
+                        <label for="sectionDescription">Описание раздела:</label>
+                        <textarea id="sectionDescription" name="sectionDescription"><?=$section->description?></textarea>
+                    </div>
+                    <div class="pure-control-group">
+                        <label for="sectionCreateDate">Дата создания:</label>
+                        <input type="text" id="sectionCreateDate" readonly name="sectionCreateDate" value="<?=$section->createDate?>" />
+                    </div>
+                    <div class="pure-control-group">
+                        <label for="sectionUpdateDate">Дата последнего изменения:</label>
+                        <input type="text" id="sectionUpdateDate" readonly name="sectionUpdateDate" value="<?=$section->updateDate?>" />
+                    </div>
+                    <div class="pure-control-group">
+                        <label for="sectionParentID">ИД родительского раздела:</label>
+                        <input type="text" id="sectionParentID" name="sectionParentID" readonly value="<?=$section->parentID?>" />
+                    </div>
+                    <div class="pure-controls">
+                        <input type="submit" name="<?=$formAction?>" value="<?=$btnName ?>" />
+                    </div>
+                </fieldset>
+            </form>
+    </body>
+</html>

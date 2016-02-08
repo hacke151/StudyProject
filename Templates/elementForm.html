@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><?=$title?></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="common.css">
+    </head>
+    <body>
+            <form method="post" action="element/<?=$formAction ?>" class="pure-form pure-form-aligned">
+                <fieldset>
+                    <div class="pure-control-group">
+                        <label for="elementID">ИД элемента:</label>
+                        <input type="text" id="elementID" name="elementID" readonly value="<?=$element->id?>"/>
+                    </div>
+                    <div class="pure-control-group">
+                         <label for="elementName">Название элемента:</label>
+                         <input type="text" id="elementName" name="elementName" value="<?=$element->name?>"/>
+                    </div>
+                    <div class="pure-control-group">
+                        <label for="elementData">Содержимое элемента:</label>
+                        <textarea id="elementData" name="elementData"><?=$element->data?></textarea>
+                    </div>
+                    <div class="pure-control-group">
+                        <label for="elementType">Тип элемента:</label>
+                        <select id="elementType" name="elementType">
+                            <option value="1" <?php if ($element->type == 1):?>selected<?php endif;?>>Новость</option>
+                            <option value="2" <?php if ($element->type == 2):?>selected<?php endif;?>>Статья</option>
+                            <option value="3" <?php if ($element->type == 3):?>selected<?php endif;?>>Отзыв</option>
+                            <option value="4" <?php if ($element->type == 4):?>selected<?php endif;?>>Комментарий</option>
+                        </select>                                                                                           
+                    </div>
+                    <div class="pure-control-group">
+                        <label for="elementCreateDate">Дата создания:</label>
+                        <input type="text" id="elementCreateDate" readonly name="elementCreateDate" value="<?=$element->createDate ?>" />
+                    </div>
+                    <div class="pure-control-group">
+                        <label for="elementUpdateDate">Дата последнего изменения:</label>
+                        <input type="text" id="elementUpdateDate" readonly name="elementUpdateDate" value="<?=$element->updateDate ?>" />
+                    </div>
+                    <div class="pure-control-group">
+                        <label for="sectionID">ИД родительского раздела:</label>
+                        <input type="text" id="sectionID" name="sectionID" readonly value="<?=$element->sectionID ?>" />
+                    </div>
+                    <div class="pure-controls">
+                        <input type="submit" name="<?=$formAction?>" value="<?=$btnName ?>" />
+                    </div>
+                </fieldset>
+            </form>
+    </body>
+</html>
